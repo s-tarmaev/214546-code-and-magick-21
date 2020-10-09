@@ -33,22 +33,28 @@ let wizards = {
     "rgb(0, 0, 0)",
   ],
 
-  eyesColor: ["black", "red", "blue", "yellow", "green"],
+  eyesColor: [
+    "black",
+    "red",
+    "blue",
+    "yellow",
+    "green"
+  ]
 };
 
-let getRandomInt = (min, max) => {
+let getRandomInteger = (min, max) => {
   let rand = min + Math.random() * (max + 1 - min);
   return Math.floor(rand);
 };
 
 let getRandomArrayElement = (array) => {
-  let number = getRandomInt(0, array.length - 1);
+  let number = getRandomInteger(0, array.length - 1);
   return array[number];
 };
 
 let generateName = (nameArray, lastArray) => {
-  let nameNumber = getRandomInt(0, nameArray.length - 1);
-  let lastNumber = getRandomInt(0, lastArray.length - 1);
+  let nameNumber = getRandomInteger(0, nameArray.length - 1);
+  let lastNumber = getRandomInteger(0, lastArray.length - 1);
 
   return nameArray[nameNumber] + " " + lastArray[lastNumber];
 };
