@@ -60,7 +60,7 @@ let generateName = (nameArray, lastArray) => {
 };
 
 let generateWizardsArray = (Object, number) => {
- let resultArray = [];
+  let resultArray = [];
   for (let i = 0; i < number; i++) {
     let wizard = {
       name: generateName(Object.name, Object.lastName),
